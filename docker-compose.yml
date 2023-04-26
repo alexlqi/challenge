@@ -1,0 +1,76 @@
+version: '3.8'
+services:
+  wordpress:
+    image: wordpress:6.2.0-php8.0-apache
+    container_name: wordpress_challenge
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - wordpress:/var/www/html
+    working_dir: /var/www/html
+
+  db:
+    image: mysql:5.7
+    restart: always
+    container_name: db_challenge
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: exampleuser
+      MYSQL_PASSWORD: examplepass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
+  
+  python:
+    image: python:3.8
+    restart: always
+    container_name: python_challenge
+    command: tail -f /dev/null
+    ports:
+      - 5000:5000
+    volumes:
+      - python:/usr/src/app
+    working_dir: /usr/src/app
+
+  nodejs:
+    image: node:14
+    restart: always
+    container_name: nodejs_challenge
+    command: tail -f /dev/null
+    ports:
+      - 3000:3000
+    volumes:
+      - nodejs:/usr/src/app
+    working_dir: /usr/src/app
+
+volumes:
+  wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./wordpress
+  db:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./db
+  python:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./python
+  nodejs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./nodejs
