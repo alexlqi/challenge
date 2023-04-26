@@ -23,8 +23,8 @@ in a console run the following commands
 docker exec -it python_challenge pip install -r requirements.txt
 ```
 ### Setting up wordpress
-First you have to go to [http://localhost:8080](this site) to configure the installation
-After finishing the installation, login into [http://localhost:8080/wp-admin](wp-admin)
+First you have to go to the [wordpress site](http://localhost:8080) to configure the installation
+After finishing the installation, login into [wp-admin](http://localhost:8080/wp-admin)
 Then, go to plugins and follow these steps:
 1. Hit the button add new and then upload
 2. Upload the zip file in the root directory of this project.
@@ -45,12 +45,12 @@ docker exec -it python_challenge python data_processing.py
 To display a list of posts filtered by a specific category, use the following shortcode:
 
 ```
-[my_post_list category="category-slug"]
+(my_post_list category="category-slug")
 ```
 
 Replace `category-slug` with the slug of the category by which to filter the posts.
 For example:
-1. Click here to [http://localhost:8080/wp-admin/post.php?post=2&action=edit](edit sample page) or go to [http://localhost:8080/wp-admin/edit.php?post_type=page](/wp-admin/edit.php?post_type=page)
+1. Click here to [edit sample page](http://localhost:8080/wp-admin/post.php?post=2&action=edit) or go to [/wp-admin/edit.php?post_type=page](http://localhost:8080/wp-admin/edit.php?post_type=page)
 2. Go to the very end of the text and hover the mouse below the blank space and click in the black and white crosshair that appears
 3. Browse for shortcode and select shortcode
 4. Use the following category: uncategorized
