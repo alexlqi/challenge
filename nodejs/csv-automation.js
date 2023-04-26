@@ -19,7 +19,6 @@ function writeCsvOutput(results){
             return JSON.stringify(value);
         }).join(',');
     });
-    console.log(csvData);
     const header = 'Name,Age,City,Email,IsAdult';
     const csvString = `${header}\n${csvData.join('\n')}`;
     fs.writeFileSync(outputFilePath, csvString, (err) =>{
