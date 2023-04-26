@@ -39,7 +39,7 @@ docker exec -it nodejs_challenge npm run start
 ### run python app
 in a console run the following commands
 ```
-docker exec -it python_challenge python data_procesing.py
+docker exec -it python_challenge python data_processing.py
 ```
 ### use wordpress plugin
 To display a list of posts filtered by a specific category, use the following shortcode:
@@ -49,3 +49,12 @@ To display a list of posts filtered by a specific category, use the following sh
 ```
 
 Replace `category-slug` with the slug of the category by which to filter the posts.
+For example:
+1. Go to pages and edit sample page
+2. Go to the very end of the text and hover the mouse below the blank space and click in the black and white crosshair that appears
+3. Browse for shortcode and select shortcode
+4. Use the following category: uncategorized
+5. Update the page from the button in the top right corner
+6. Click the preview button right next to update and the select the option preview in new tab
+7. You'll see a list of items of the posts as hyperlinks
+
