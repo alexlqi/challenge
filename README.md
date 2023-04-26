@@ -23,8 +23,8 @@ in a console run the following commands
 docker exec -it python_challenge pip install -r requirements.txt
 ```
 ### Setting up wordpress
-First you have to go to [localhost:8080](this site) to configure the installation
-After finishing the installation, login into [localhost:8080/wp-admin](wp-admin)
+First you have to go to [http://localhost:8080](this site) to configure the installation
+After finishing the installation, login into [http://localhost:8080/wp-admin](wp-admin)
 Then, go to plugins and follow these steps:
 1. Hit the button add new and then upload
 2. Upload the zip file in the root directory of this project.
