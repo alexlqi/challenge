@@ -7,6 +7,11 @@ to install everything you have to clone this repo using the following:
 ```
 git clone https://github.com/alexlqi/challenge.git
 ```
+### create the containers
+In order to have access to the solutions you have to turn on the containers
+```
+docker-compose up -d
+```
 ### setting up nodejs
 in a console run the following commands
 ```
