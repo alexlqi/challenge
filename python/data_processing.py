@@ -21,8 +21,8 @@ def write_csv_file(df, output_file):
         print(e)
 
 def main():
-    input_file = "/usr/src/app/input.csv"
-    output_file = "/usr/src/app/output.csv"
+    input_file = "input.csv"
+    output_file = "output.csv"
     
     try:
         df = read_csv_file(input_file)
