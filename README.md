@@ -7,41 +7,41 @@ to install everything you have to clone this repo using the following:
 ```
 git clone https://github.com/alexlqi/challenge.git
 ```
-### create the containers
+### Create the containers
 In order to have access to the solutions you have to turn on the containers
 ```
 docker-compose up -d
 ```
-### setting up nodejs
+### Setting up nodejs
 in a console run the following commands
 ```
 docker exec -it nodejs_challenge npm install
 ```
-### setting up python
+### Setting up python
 in a console run the following commands
 ```
 docker exec -it python_challenge pip install -r requirements.txt
 ```
-### setting up wordpress
-First you have to go to (this site)[localhost:8080/] to configure the installation
-After finishing the installation, login into (wp-admin)[localhost:8080/wp-admin]
+### Setting up wordpress
+First you have to go to [localhost:8080/](this site) to configure the installation
+After finishing the installation, login into [localhost:8080/wp-admin](wp-admin)
 Then, go to plugins and follow these steps:
 1. Hit the button add new and then upload
 2. Upload the zip file in the root directory of this project.
 3. Activate the plugin from the WordPress admin panel.
 
 ## Usage
-### run nodejs app
+### Run nodejs app
 in a console run the following commands
 ```
 docker exec -it nodejs_challenge npm run start
 ```
-### run python app
+### Run python app
 in a console run the following commands
 ```
 docker exec -it python_challenge python data_processing.py
 ```
-### use wordpress plugin
+### Use wordpress plugin
 To display a list of posts filtered by a specific category, use the following shortcode:
 
 ```
